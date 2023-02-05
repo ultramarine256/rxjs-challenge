@@ -4,6 +4,7 @@ import {
   Day02Component,
   Day03Component,
   FocusWithinModule,
+  HomePage,
   PagesComponent,
   PagesRouting,
 } from './index';
@@ -13,6 +14,7 @@ const COMPONENTS = [
   Day01Component,
   Day02Component,
   Day03Component,
+  HomePage,
   PagesComponent,
 ];
 

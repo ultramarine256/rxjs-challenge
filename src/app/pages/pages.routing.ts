@@ -5,6 +5,7 @@ import {
   Day01Component,
   Day02Component,
   Day03Component,
+  HomePage,
   PagesComponent,
 } from './index';
 
@@ -15,7 +16,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: Day01Component,
+        component: HomePage,
       },
       {
         path: 'day-01',
