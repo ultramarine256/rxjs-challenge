@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { forkJoin, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-home-page',
@@ -15,7 +16,10 @@ import { Component, OnInit } from '@angular/core';
         <div>day-01</div>
         <small>Create an Observable to track focus in a section of the page</small>
       </a>
-      <a routerLink="/day-02" class="list-group-item list-group-item-action"> day-02 </a>
+      <a routerLink="/day-02" class="list-group-item list-group-item-action">
+        <div>day-02</div>
+        <small>Create a page visibility stream.</small>
+      </a>
       <a routerLink="/day-03" class="list-group-item list-group-item-action">
         <div>day-03</div>
         <small>Show error message for 5 seconds if login has failed</small>
@@ -27,5 +31,8 @@ import { Component, OnInit } from '@angular/core';
   styles: [``],
 })
 export class HomePage implements OnInit {
-  ngOnInit(): void {}
+  ngOnInit() {
+    const a$: Observable<string[]> = of([]);
+    const b$ = forkJoin([a$]);
+  }
 }

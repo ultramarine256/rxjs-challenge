@@ -1,13 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesModule } from './pages.module';
-import {
-  Day01Component,
-  Day02Component,
-  Day03Component,
-  HomePage,
-  PagesComponent,
-} from './index';
+import { Day01Component, Day02Component, Day03Component, Day05Component, HomePage, PagesComponent } from './index';
 
 const routes: Routes = [
   {
@@ -31,6 +25,10 @@ const routes: Routes = [
         component: Day03Component,
       },
       {
+        path: 'day-05',
+        component: Day05Component,
+      },
+      {
         path: '**',
         redirectTo: '',
       },
@@ -38,5 +36,4 @@ const routes: Routes = [
   },
 ];
 
-export const PagesRouting: ModuleWithProviders<PagesModule> =
-  RouterModule.forChild(routes);
+export const PagesRouting: ModuleWithProviders<PagesModule> = RouterModule.forChild(routes);

@@ -1,3 +1,10 @@
-<div class="alert alert-danger" role="alert">Error message</div>
+<ng-container *ngIf="vm$ | async as vm">
+  <div>loading: {{ vm.loading }}</div>
+  <div class="alert alert-danger" role="alert" *ngIf="vm.login == 'error'">Error message</div>
+</ng-container>
 
-<button type="button" class="btn btn-primary btn-sm" (click)="submit$.next()">Submit</button>
+<br />
+
+<!---->
+
+<button type="button" class="btn btn-primary btn-sm" (click)="login()">Submit</button>
